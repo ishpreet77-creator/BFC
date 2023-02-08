@@ -12,18 +12,20 @@ class GoogleSignInHelper: NSObject{
     private var presentationController : UIViewController?
 
     func googleSignIn(with view: UIViewController,completion : @escaping (SocialSignInModel?) -> ()){
-        let config = GIDConfiguration(clientID: "734412433009-hua8gppg3t4cnj8gdvreor8g5d2a08kr.apps.googleusercontent.com")
+       // let config = GIDConfiguration(clientID: "734412433009-hua8gppg3t4cnj8gdvreor8g5d2a08kr.apps.googleusercontent.com")
                 self.completion = completion
+        
         // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: view) { [unowned self] userr, error in
+//        GIDSignIn.sharedInstance.si
+        GIDSignIn.sharedInstance.signIn(withPresenting: view) { [unowned self] userr, error in
 
                     if let user = userr{
                         let model = SocialSignInModel()
-                        model.id = user.userID
-                        model.name = user.profile?.name
-                        model.firstName = user.profile?.givenName
-                        model.lastName = user.profile?.familyName
-                        model.email = user.profile?.email
+                        model.id = user.user.userID
+                        model.name = user.user.profile?.name
+                        model.firstName = user.user.profile?.givenName
+                        model.lastName = user.user.profile?.familyName
+                        model.email = user.user.profile?.email
                         self.completion?(model)
                     }
         }

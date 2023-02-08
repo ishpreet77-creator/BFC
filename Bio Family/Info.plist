@@ -31,6 +31,8 @@
 			</array>
 		</dict>
 	</array>
+    <key>GIDClientID</key>
+    <string>734412433009-hua8gppg3t4cnj8gdvreor8g5d2a08kr.apps.googleusercontent.com</string>
 	<key>FacebookAppID</key>
 	<string>717072799770048</string>
 	<key>FacebookClientToken</key>
