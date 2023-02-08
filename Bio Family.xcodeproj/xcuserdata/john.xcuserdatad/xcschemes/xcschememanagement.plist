@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>NotificationExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>49</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>521F85BE296FF8DB000461CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5232EB5A2956FDB400774FC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5248E3BB2970245400EB047A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -1,0 +1,31 @@
+//
+//  AppointmentTVC.swift
+//  Bio Family
+//
+//  Created by John on 26/12/22.
+//
+
+import UIKit
+
+class AppointmentTVC: UITableViewCell {
+
+    @IBOutlet weak var lblReason: UILabel!
+    @IBOutlet weak var lblInsurance: UILabel!
+    @IBOutlet weak var btnDetail: UIButtonX!
+    @IBOutlet weak var btnCancel: UIButtonX!
+    @IBOutlet weak var btnReschedule: UIButtonX!
+    @IBOutlet weak var mainView: UIViewX!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+
+}

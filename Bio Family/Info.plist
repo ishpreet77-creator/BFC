@@ -2,6 +2,47 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.734412433009-hua8gppg3t4cnj8gdvreor8g5d2a08kr</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb717072799770048</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.BioFamily.Bio-Family.Bio</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>717072799770048</string>
+	<key>FacebookClientToken</key>
+	<string>bfed8768113093a7f933e74cb21cefa1</string>
+	<key>FacebookDisplayName</key>
+	<string>Bio Family</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,5 +62,21 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow To Update Profile Picture</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow To Update Profile Picture</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow To Access Current Location To FInd Nearest Clinic</string>
 </dict>
 </plist>
