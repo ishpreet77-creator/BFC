@@ -16,7 +16,7 @@ class GoogleSignInHelper: NSObject{
                 self.completion = completion
         
         // Start the sign in flow!
-//        GIDSignIn.sharedInstance.si
+//        GIDSignIn.sharedInstance.sighcvh
         GIDSignIn.sharedInstance.signIn(withPresenting: view) { [unowned self] userr, error in
 
                     if let user = userr{
