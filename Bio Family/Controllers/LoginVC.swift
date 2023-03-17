@@ -27,13 +27,13 @@ class LoginVC: BaseViewController {
     //MARK: actionLogin
     @IBAction func actionLogin(_ sender: UIButton) {
         if email.text == ""{
-            toast("Please enter email")
+            toast(Constants.Localicable.enterEmail)
         }
         else if !isValidEmail(email.text ?? ""){
-            toast("Please enter Valid email")
+            toast(Constants.Localicable.enterVaildEmail)
         }
         else if tfPassword.text == ""{
-            toast("Please enter Valid password")
+            toast(Constants.Localicable.eterVaildPassword)
         }
 //        else if isPasswordValid(tfPassword.text ?? ""){
 //            showAlert("Password length is 8.\nUpperCase letters in Password.\nOne Special Character in Password.T\nwo Number in Password.\nThree letters of lowercase in password")
@@ -74,21 +74,23 @@ class LoginVC: BaseViewController {
         
         AppDefaults.loginBy = "facebook"
         FacebookSignInHelper.shared.facebookSignIn(with: self) { fbData in
-            AppDefaults.userEmail = fbData?.email ?? ""
-            
-            self.uploadVM.socialLogin(SocialLogin(login_type: "facebook", facebook_id: fbData?.id ?? "", google_id:"", auth_id: "", email: fbData?.email ?? "", fcmToken: "", deviceId: UIDevice.current.identifierForVendor!.uuidString, firstName: fbData?.firstName ?? ""))
+            if let fbData = fbData{
+                AppDefaults.userEmail = fbData.email ?? ""
+                
+                self.uploadVM.socialLogin(SocialLogin(login_type: "facebook", facebook_id: fbData.id ?? "", google_id:"", auth_id: "", email: fbData.email ?? "", fcmToken: "", deviceId: UIDevice.current.identifierForVendor!.uuidString, firstName: fbData.firstName ?? ""))
+            }
         }
-        
     }
     
     
     @IBAction func appleTapped(_ sender: UITapGestureRecognizer) {
         AppDefaults.loginBy = "apple"
         AppleLoginHelper.shared.AppleSignIn(with: self) { appleData in
-            AppDefaults.userEmail = appleData?.email ?? ""
-            self.uploadVM.socialLogin(SocialLogin(login_type: "apple", facebook_id: "", google_id:"", auth_id: appleData?.id ?? "", email: appleData?.email ?? "", fcmToken: "", deviceId: UIDevice.current.identifierForVendor!.uuidString, firstName: appleData?.firstName ?? ""))
+            if let appleData = appleData{
+                AppDefaults.userEmail = appleData.email ?? ""
+                self.uploadVM.socialLogin(SocialLogin(login_type: "apple", facebook_id: "", google_id:"", auth_id: appleData.id ?? "", email: appleData.email ?? "", fcmToken: "", deviceId: UIDevice.current.identifierForVendor!.uuidString, firstName: appleData.firstName ?? ""))
+            }
         }
-        
     }
     //MARK: signup
     @IBAction func signUpTapped(_ sender: UITapGestureRecognizer) {
@@ -109,6 +111,7 @@ class LoginVC: BaseViewController {
         }
         uploadVM.response.subscribe(onNext: { (response) in
             if response?.status == true{
+                
                 AppDefaults.userData = response?.userData ?? LoginReponse()
                 DispatchQueue.main.async {
                     let story = UIStoryboard(name: Constants.AppStatic.storyBoard, bundle:nil)

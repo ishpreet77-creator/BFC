@@ -27,13 +27,13 @@ class NewPasswordVC: BaseViewController {
     //MARK: actionConfirm
     @IBAction func actionConfirm(_ sender: UIButton) {
         if tfPassword.text == ""{
-            toast("Please enter password")
+            toast(Constants.Localicable.enterPassword)
         }
         else if tfConfirmPassword.text == ""{
-            toast("Please enter Confirm Password")
+            toast(Constants.Localicable.enterConfirmPassword)
         }
         else if tfPassword.text != tfConfirmPassword.text{
-            toast("Password and confirm password is not same")
+            toast(Constants.Localicable.passwordNotMatch)
         }
         else{
             if let email = self.email,let pass = tfPassword.text,let otp = self.otp{

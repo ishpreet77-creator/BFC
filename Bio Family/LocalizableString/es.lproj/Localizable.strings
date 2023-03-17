@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  Bio Family
+
+  Created by John on 28/02/23.
+  
+*/
+
+"Please enter First Name" = "Por favor, introduzca el nombre";
+"Please enter Last Name" = "Por favor ingrese Apellido";
+"Please enter email" = "Por favor ingrese el correo electrónico";
+"Please enter Valid email" = "Por favor introduzca un correo electrónico válido";
+"Please enter date of birth" = "Por favor ingrese la fecha de nacimiento";
+"Please enter Phone Number" = "Por favor, introduzca el número de teléfono";
+"Please enter Password" = "Por favor, ingrese contraseña";
+"Please enter Confirm Password" = "Por favor ingrese Confirmar contraseña";
+"Please enter Valid Password" = "La longitud de la contraseña es 8.\nLetras mayúsculas en la contraseña.\nUn carácter especial en la contraseña.\nDos números en la contraseña.\nTres letras minúsculas en la contraseña";
+"Password Does not match with confirm password" = "La contraseña no coincide con la contraseña de confirmación";
+"Please enter insurrance name" = "Por favor ingrese el nombre del seguro";
+"Please Check the Privacy Policy and Terms and Condition" = "Consulte la Política de privacidad y los Términos y condiciones";
+"Please enter valid email id" = "Ingrese una identificación de correo electrónico válida";
+"lblOtp Screen Message" = "Hemos enviado un código de verificación de 4 dígitos en \n su ID de correo electrónico";
+"Otp sent to your mail" = "Otp enviado a tu correo";
+"Wrong otp" = "OTP incorrecto";
+"Watch\nEducational Videos \n" = "Watch\nEducational Videos \n";
+"Read\nHealth tips \n Magazine" = "Read\nHealth tips \n Magazine";
+"Submit Your Review" = "Envíe su reseña";
+"Are you sure yow want to delete your Account." = "¿Estás seguro de que quieres eliminar tu cuenta?";
+"Ok" = "De acuerdo";
+"Cancel" = "Cancelar";
+"Schedule Appointment" = "Programar una cita";
+"Send" = "Enviar";
+"Reason for Appointment" = "Motivo de la cita";
+"Cancel Appointment" = "Cancelar cita";
+"Reason for Cancel" = "Motivo de la cancelación";
+"Reschedule Appointment" = "Re-agenda de citas";
+"Reschedule" = "Reprogramar";
+"Reason for Reschedule" = "Motivo de la reprogramación";
+"Confirm Appointment" = "Confirmar cita";
+"Confirm" = "Confirmar";
+"Reason for Confirm" = "Razón para confirmar";
+"please enter reason for appointment" = "por favor ingrese el motivo de la cita";
+"Write your feedback..." = "Escribe tus comentarios...";
+"Type your Message..." = "Escribe tu mensaje...";
+"Please enter Message" = "Por favor ingrese Mensaje";
+"New" = "Nuevo";
+"Refill prescriptions" = "Resurtir recetas";
+"Invaild status" = "Estado inválido";
+"Please enter WifiName" = "Por favor, introduzca WifiName";
+"Please Check the Terms and Condition" = "Por favor, consulte los términos y condiciones";
+"Join Free Wifi Now" = "Únete a Wi-Fi gratis ahora";
+"Request New Appointment" = "Solicitar Nueva Cita";
+"Cancel Existing Appointment" = "Cancelar cita existente";
+"Plese enter Prescripition" = "Por favor ingrese Receta";
+"App restart required" = "Se requiere reiniciar la aplicación";
+"In order to change the language, the App needs to be restarted" = "Para cambiar el idioma, la aplicación debe reiniciarse";
+"Watch Educational Videos" = "Ver videos educativos";
+"Home" = "Hogar";
+"My Profile" = "Mi perfil";
+"Appointments" = "Cita";
+"Read Health Tips Magazine" = "Lea la revista Consejos de salud";
+"Settings" = "Ajustes";
+"History" = "Historia";
+"We have sent a 4-digit verification code on \n your email id" = "Hemos enviado un código de verificación de 4 dígitos en \n su ID de correo electrónico";
+"Please enter old password" = "Por favor ingrese la contraseña anterior";
+"Please enter Review" = "Por favor ingrese Revisión";

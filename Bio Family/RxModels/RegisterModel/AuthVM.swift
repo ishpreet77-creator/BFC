@@ -19,6 +19,7 @@ case UpdateProfile
     case reset
     case refresh
     case resend
+    case notification
 }
 
 class AuthVM: ViewModel<AuthResponse>{
@@ -202,7 +203,19 @@ class AuthVM: ViewModel<AuthResponse>{
             self.error.onNext(error.localizedDescription)
         }).disposed(by: super.disposeBag)
     }
-
+    func notification(_ req: NotificationRequest){
+        isLoading.onNext(true)
+        repository.notificxation(req).subscribe(onSuccess: { (response) in
+            if response.statusCode == 200{
+            }
+            self.type = .notification
+            self.response.onNext(response)
+            self.isLoading.onNext(false)
+        }, onFailure: { (error) in
+            self.isLoading.onNext(false)
+            self.error.onNext(error.localizedDescription)
+        }).disposed(by: super.disposeBag)
+    }
     
 //    func loginUser(_ req: AuthRequest){
 //        isLoading.onNext(true)

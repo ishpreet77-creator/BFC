@@ -35,22 +35,22 @@ class DrawerVC: BaseViewController {
         tblDrawer.dataSource = self
         // Do any additional setup after loading the view.
         
-        unselectedDrawerItems = [DrawerModel(title: Constants.AppStatic.home, image: Constants.AppAssets.home),
-                                 DrawerModel(title: Constants.AppStatic.profile, image: Constants.AppAssets.profile),
-                                 DrawerModel(title: Constants.AppStatic.appointment, image: Constants.AppAssets.selectedAppointment),
-                                 DrawerModel(title: Constants.AppStatic.video, image: Constants.AppAssets.selectedVideo),
-                                 DrawerModel(title: Constants.AppStatic.magzine, image: Constants.AppAssets.magzineDrawer),
-                                 DrawerModel(title: Constants.AppStatic.history, image: Constants.AppAssets.historyDrawer),
-                                 DrawerModel(title: Constants.AppStatic.setting, image: Constants.AppAssets.setting)
+        unselectedDrawerItems = [DrawerModel(title: Constants.Localicable.home, image: Constants.AppAssets.home),
+                                 DrawerModel(title: Constants.Localicable.profile, image: Constants.AppAssets.profile),
+                                 DrawerModel(title: Constants.Localicable.appointment, image: Constants.AppAssets.selectedAppointment),
+                                 DrawerModel(title: Constants.Localicable.video, image: Constants.AppAssets.selectedVideo),
+                                 DrawerModel(title: Constants.Localicable.magzine, image: Constants.AppAssets.magzineDrawer),
+                                 DrawerModel(title: Constants.Localicable.history, image: Constants.AppAssets.historyDrawer),
+                                 DrawerModel(title: Constants.Localicable.setting, image: Constants.AppAssets.setting)
                                  
         ]
-        selectedDrawerItems = [DrawerModel(title: Constants.AppStatic.home, image: Constants.AppAssets.homeWhite),
-                               DrawerModel(title: Constants.AppStatic.profile, image: Constants.AppAssets.profileWhite),
-                               DrawerModel(title: Constants.AppStatic.appointment, image: Constants.AppAssets.appointmentWhite),
-                               DrawerModel(title: Constants.AppStatic.video, image: Constants.AppAssets.videoWhite),
-                               DrawerModel(title: Constants.AppStatic.magzine, image: Constants.AppAssets.magzineWhite),
-                               DrawerModel(title: Constants.AppStatic.history, image: Constants.AppAssets.whiteHistoryDrawer),
-                               DrawerModel(title: Constants.AppStatic.setting, image: Constants.AppAssets.settingWhite)
+        selectedDrawerItems = [DrawerModel(title: Constants.Localicable.home, image: Constants.AppAssets.homeWhite),
+                               DrawerModel(title: Constants.Localicable.profile, image: Constants.AppAssets.profileWhite),
+                               DrawerModel(title: Constants.Localicable.appointment, image: Constants.AppAssets.appointmentWhite),
+                               DrawerModel(title: Constants.Localicable.video, image: Constants.AppAssets.videoWhite),
+                               DrawerModel(title: Constants.Localicable.magzine, image: Constants.AppAssets.magzineWhite),
+                               DrawerModel(title: Constants.Localicable.history, image: Constants.AppAssets.whiteHistoryDrawer),
+                               DrawerModel(title: Constants.Localicable.setting, image: Constants.AppAssets.settingWhite)
                                
                                
         ]
@@ -148,6 +148,9 @@ extension DrawerVC:UITableViewDelegate,UITableViewDataSource{
                 let index:[String: Int] = ["index":5]
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "screenChange"), object: nil, userInfo: index)
             }
+        }
+        else if indexPath.row == 6{
+            let _: SettingVC = self.open()
         }
         else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0){

@@ -52,7 +52,7 @@ struct SocialLogin: JsonSerilizer {
             "device_id":deviceId,
             "facebook_id": facebook_id,
             "google_id":google_id,
-            "auth_id": auth_id,
+            "auth_token": auth_id,
             "os":"ios"
         ]
     }
@@ -124,6 +124,15 @@ struct ChangePassword: JsonSerilizer {
         return [
             "old_password":oldPassword,
             "new_password": newPassword,
+        ]
+    }
+}
+struct NotificationRequest: JsonSerilizer {
+    var notification: Int = 1
+
+    func serilize() -> Dictionary<String, Any> {
+        return [
+            "notification_type": notification,
         ]
     }
 }

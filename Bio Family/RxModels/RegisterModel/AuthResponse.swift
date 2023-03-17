@@ -83,6 +83,7 @@ struct LoginReponse: JsonDeserilizer {
     var is_email_verified = ""
     var login_type = ""
     var insurancename = ""
+    var notifcation :Int = 0
     mutating func deserilize(values: Dictionary<String, Any>?) {
         
         userId = values?["_id"] as? String ?? ""
@@ -95,8 +96,8 @@ struct LoginReponse: JsonDeserilizer {
         is_email_verified = values?["is_email_verified"] as? String ?? ""
         login_type = values?["login_type"] as? String ?? ""
         insurancename = values?["insurance_name"] as? String ?? ""
-
-
+        notifcation = values?[" notification_type"] as? Int ?? 0
+       
     }
 }
 

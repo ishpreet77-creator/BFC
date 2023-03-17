@@ -1,0 +1,66 @@
+/* 
+  Localizable.strings
+  Bio Family
+
+  Created by John on 28/02/23.
+  
+*/
+
+"Please enter First Name" = "Please enter First Name";
+"Please enter Last Name" = "Please enter Last Name";
+"Please enter email" = "Please enter email";
+"Please enter Valid email" = "Please enter Valid email";
+"Please enter date of birth" = "Please enter date of birth";
+"Please enter Phone Number" = "Please enter Phone Number";
+"Please enter Password" = "Please enter Password";
+"Please enter Confirm Password" = "Please enter Confirm Password";
+"Please enter Valid Password" = "Password length is 8.\nUpperCase letters in Password.\nOne Special Character in Password.\nTwo Number in Password.\nThree letters of lowercase in password";
+"Password Does not match with confirm password" = "Password Does not match with confirm password";
+"Please enter insurrance name" = "Please enter insurrance name";
+"Please Check the Privacy Policy and Terms and Condition" = "Please Check the Privacy Policy and Terms and Condition";
+"Please enter valid email id" = "Please enter valid email id";
+"lblOtp Screen Message" = "We have sent a 4-digit verification code on \n your email id";
+"Otp sent to your mail" = "Otp sent to your mail";
+"Wrong otp" = "Wrong otp";
+"Watch\nEducational Videos \n" = "Watch\nEducational Videos \n";
+"Read\nHealth tips \n Magazine" = "Read\nHealth tips \n Magazine";
+"Submit Your Review" = "Submit Your Review";
+"Are you sure yow want to delete your Account." = "Are you sure yow want to delete your Account.";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"Schedule Appointment" = "Schedule Appointment";
+"Send" = "Send";
+"Reason for Appointment" = "Reason for Appointment";
+"Cancel Appointment" = "Cancel Appointment";
+"Reason for Cancel" = "Reason for Cancel";
+"Reschedule Appointment" = "Reschedule Appointment";
+"Reschedule" = "Reschedule";
+"Reason for Reschedule" = "Reason for Reschedule";
+"Confirm Appointment" = "Confirm Appointment";
+"Confirm" = "Confirm";
+"Reason for Confirm" = "Reason for Confirm";
+"please enter reason for appointment" = "please enter reason for appointment";
+"Write your feedback..." = "Write your feedback...";
+"Type your Message..." = "Type your Message...";
+"Please enter Message" = "Please enter Message";
+"New" = "New";
+"Refill prescriptions" = "Refill prescriptions";
+"Invaild status" = "Invaild status";
+"Please enter WifiName" = "Please enter WifiName";
+"Please Check the Terms and Condition" = "Please Check the Terms and Condition";
+"Join Free Wifi Now" = "Join Free Wifi Now";
+"Request New Appointment" = "Request New Appointment";
+"Cancel Existing Appointment" = "Cancel Existing Appointment";
+"Plese enter Prescripition" = "Plese enter Prescripition";
+"App restart required" = "App restart required";
+"In order to change the language, the App needs to be restarted" = "In order to change the language, the App needs to be restarted";
+"Watch Educational Videos" = "Watch Educational Videos";
+"Home" = "Home";
+"My Profile" = "My Profile";
+"Appointments" = "Appointments";
+"Read Health Tips Magazine" = "Read Health Tips Magazine";
+"Settings" = "Settings";
+"History" = "History";
+"We have sent a 4-digit verification code on \n your email id" = "We have sent a 4-digit verification code on \n your email id";
+"Please enter old password" = "Please enter old password";
+"Please enter Review" = "Please enter Review";

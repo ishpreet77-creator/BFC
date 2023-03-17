@@ -22,4 +22,6 @@ protocol AuthRepo {
     func editProfile(_ req: EditProfile) -> Single<AuthResponse>
     func ChangePassword(_ req: ChangePassword) -> Single<AuthResponse>
     func resentOtp(_ req: ForgetReqst) -> Single<AuthResponse>
+    func notificxation(_ req: NotificationRequest) -> Single<AuthResponse>
+    
 }

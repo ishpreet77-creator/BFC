@@ -4,7 +4,7 @@
 //
 //  Created by John on 24/12/22.
 //
-
+import Foundation
 import UIKit
 import IQKeyboardManagerSwift
 import FirebaseCore
@@ -20,12 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     class func share() -> AppDelegate{
         return UIApplication.shared.delegate as! AppDelegate
     }
+    var systemLanguage = Bundle.main.preferredLocalizations.first as! NSString
+    
     private let uploadVM = AuthVM.init(repository: AuthRepoImp.init(rxApi: RxApi()))
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         // Override point for customization after application launch.
+        AppUpdater.shared.showUpdate(withConfirmation: false)
         self.refreshResponse()
         //message
-      
+        print(systemLanguage)
+        setDefaultLanguage()
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         Messaging.messaging().isAutoInitEnabled = true
@@ -60,7 +65,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                 uploadVM.refreshToken(RefreshToken(id: AppDefaults.userData.userId, oldToken: AppDefaults.userData.token))
             }
         }
+//        let isFunctionCalled = UserDefaults.standard.bool(forKey: "functionCalled")
+//        print("isFunctionCalled: \(isFunctionCalled)")
+//
+//        if !isFunctionCalled {
+//            print("Calling languageAlert()")
+//            // Call your function here
+//            languageAlert()
+//
+//            // Set the UserDefaults value for the key "functionCalled" to true
+//            UserDefaults.standard.set(true, forKey: "functionCalled")
+//        } else {
+//            print("languageAlert() was not called because isFunctionCalled is true")
+//        }
+        showLanguageAlertIfNeeded()
         return true
+    }
+ 
+    func setDefaultLanguage() {
+        let lang = Locale.preferredLanguages.first ?? "en"
+        UserDefaults.standard.set([lang], forKey: "systemLanuage")
+        UserDefaults.standard.synchronize()
+    }
+//    func languageAlert(){
+//        let alertmessage = UIAlertController(title: "Biofamily", message: "App language can be set as a system language, If you can change language please Signup or Login then go to setting language  and chane language\n Thankyou", preferredStyle: .alert)
+//        let actionOk = UIAlertAction(title: "Ok", style: .default) { (action) in
+//
+//        }
+//        alertmessage.addAction(actionOk)
+////        present(alertmessage, animated: true, completion: nil)
+//        window?.rootViewController?.present(alertmessage, animated: true, completion: nil)
+//    }
+//    func languageAlert() {
+//        let alertmessage = UIAlertController(title: "Biofamily", message: "App language can be set as a system language, If you can change language please Signup or Login then go to setting language  and chane language\n Thankyou", preferredStyle: .alert)
+//        let actionOk = UIAlertAction(title: "Ok", style: .default) { (action) in
+//        }
+//        alertmessage.addAction(actionOk)
+//        if let topController = UIApplication.shared.keyWindow?.rootViewController {
+//            topController.present(alertmessage, animated: true, completion: nil)
+//        }
+//    }
+//    func languageAlert() {
+//        let alertmessage = UIAlertController(title: "Biofamily", message: "App language can be set as a system language, If you can change language please Signup or Login then go to setting language  and chane language\n Thankyou", preferredStyle: .alert)
+//        let actionOk = UIAlertAction(title: "Ok", style: .default) { (action) in
+//        }
+//        alertmessage.addAction(actionOk)
+//        if let topController = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController {
+//            topController.present(alertmessage, animated: true, completion: nil)
+//        }
+//    }
+    func showLanguageAlertIfNeeded() {
+        let isFunctionCalled = UserDefaults.standard.bool(forKey: "functionCalled")
+        guard !isFunctionCalled else {
+            return
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let alertmessage = UIAlertController(title: "Biofamily", message: "App language can be set as a system language, If you can change language please Signup/Login then go to setting language and change language.\nThank you.", preferredStyle: .alert)
+            let actionOk = UIAlertAction(title: "Ok", style: .default) { (action) in
+                UserDefaults.standard.set(true, forKey: "functionCalled")
+            }
+            alertmessage.addAction(actionOk)
+            guard let topController = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController else {
+                return
+            }
+            topController.present(alertmessage, animated: true, completion: nil)
+        }
     }
     
     
@@ -85,6 +155,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         
     }
     
+    
+  
+    
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         print("mkdjngvkjs")
     }
@@ -100,6 +174,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     }
     func applicationWillTerminate(_ application: UIApplication) {
         print("Terminate")
+       
     }
     
     

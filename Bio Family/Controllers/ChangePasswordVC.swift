@@ -29,19 +29,19 @@ class ChangePasswordVC: BaseViewController {
     
     @IBAction func actionConfirm(_ sender: UIButton) {
         if tfoldPassword.text == ""{
-            toast("Please enter old password")
+            toast(Constants.Localicable.enterOldPassword)
         }
         else if tfPassword.text == ""{
-            toast("Please enter password")
+            toast(Constants.Localicable.enterPassword)
         }
         else if tfConfirmPassword.text == ""{
-            toast("Please enter confirm password")
+            toast(Constants.Localicable.enterConfirmPassword)
         }
         else if tfPassword.text != tfConfirmPassword.text{
-            toast("Password Doesnot match with confirm password")
+            toast(Constants.Localicable.passwordNotMatch)
         }
         else if isPasswordValid(tfPassword.text ?? "") == false{
-            showAlert("Password length is 8.\nUpperCase letters in Password.\nOne Special Character in Password.\nTwo Number in Password.\nThree letters of lowercase in password")
+            showAlert(Constants.Localicable.eterVaildPassword)
         }
         else{
             uploadVM.changePasswoird(ChangePassword(oldPassword: tfoldPassword.text ?? "", newPassword: tfPassword.text ?? ""))

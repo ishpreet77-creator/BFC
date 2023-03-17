@@ -62,22 +62,22 @@ extension NewAppointmentVC : UITableViewDelegate,UITableViewDataSource{
         let cell = AppTableView.dequeueReusableCell(withIdentifier: "Newcell", for: indexPath) as! NewAppointsmentsTVC
         if indexPath.row == 0{
             cell.img.image = UIImage(named: "BlueRectangle")
-            cell.newAppointmentLabel.text = "Request New Appointment"
+            cell.newAppointmentLabel.text = Constants.Localicable.requestNewAppoint
         }
         if indexPath.row == 1{
             cell.img.image = UIImage(named: "RectangleRed")
-            cell.newAppointmentLabel.text = "Cancel Existing Appointment"
+            cell.newAppointmentLabel.text = Constants.Localicable.cancelExistingAppoint
         }
         if indexPath.row == 2 {
 //            cell.img.image = UIImage(named: "RectangleGreen")
-            cell.newAppointmentLabel.text = "Reschedule Appointment"
+            cell.newAppointmentLabel.text = Constants.Localicable.rescheduleAppoint
             cell.img.isHidden = true
             
             cell.mainView.backgroundColor = UIColor(named: "SolidGreen2")
             cell.mainView.cornerRadius = 12
         }
         if indexPath.row == 3 {
-            cell.newAppointmentLabel.text = "Confirm Appointment"
+            cell.newAppointmentLabel.text = Constants.Localicable.confirmAppoint
             cell.img.isHidden = true
             
             cell.mainView.backgroundColor = UIColor(named: "yellowColor")

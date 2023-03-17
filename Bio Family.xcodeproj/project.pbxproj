@@ -25,6 +25,8 @@
 		522846172966E7BA00C854A5 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522846162966E7BA00C854A5 /* HistoryVC.swift */; };
 		5228461B2966E86200C854A5 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228461A2966E86200C854A5 /* HistoryTVC.swift */; };
 		5228461D2966F70700C854A5 /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228461C2966F70700C854A5 /* Videos.swift */; };
+		52314F2929BF03F200467010 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52314F2829BF03F200467010 /* StoreKit.framework */; };
+		52314F2B29BF070000467010 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52314F2A29BF070000467010 /* AppUpdater.swift */; };
 		5232EB5F2956FDB400774FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232EB5E2956FDB400774FC6 /* AppDelegate.swift */; };
 		5232EB612956FDB400774FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232EB602956FDB400774FC6 /* SceneDelegate.swift */; };
 		5232EB662956FDB400774FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5232EB642956FDB400774FC6 /* Main.storyboard */; };
@@ -59,6 +61,9 @@
 		5232EBAC2956FE2500774FC6 /* RootTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232EBA22956FE2500774FC6 /* RootTransitions.swift */; };
 		5232EBAD2956FE2500774FC6 /* UIVisualEffectViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232EBA32956FE2500774FC6 /* UIVisualEffectViewX.swift */; };
 		5232EBAE2956FE2500774FC6 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232EBA42956FE2500774FC6 /* UIButtonX.swift */; };
+		5235B39B29ADDECD007AD6BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5235B39E29ADDECD007AD6BC /* Localizable.strings */; };
+		5235B39C29ADDECD007AD6BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5235B39E29ADDECD007AD6BC /* Localizable.strings */; };
+		5235B3A029ADE344007AD6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5232EB642956FDB400774FC6 /* Main.storyboard */; };
 		5243AA89295D6C4700F25F88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5243AA88295D6C4700F25F88 /* GoogleService-Info.plist */; };
 		5243AA8E295D6DE500F25F88 /* GoogleSignInHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243AA8C295D6DE500F25F88 /* GoogleSignInHelper.swift */; };
 		5243AA8F295D6DE500F25F88 /* SocialSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243AA8A295D6DE500F25F88 /* SocialSignInModel.swift */; };
@@ -178,6 +183,8 @@
 		522846162966E7BA00C854A5 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		5228461A2966E86200C854A5 /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
 		5228461C2966F70700C854A5 /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		52314F2829BF03F200467010 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		52314F2A29BF070000467010 /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
 		5232EB5B2956FDB400774FC6 /* Bio Family.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bio Family.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5232EB5E2956FDB400774FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5232EB602956FDB400774FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +221,11 @@
 		5232EBA22956FE2500774FC6 /* RootTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTransitions.swift; sourceTree = "<group>"; };
 		5232EBA32956FE2500774FC6 /* UIVisualEffectViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewX.swift; sourceTree = "<group>"; };
 		5232EBA42956FE2500774FC6 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		5235B39329ADD893007AD6BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		5235B39529ADDE1F007AD6BC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		5235B39629ADDE1F007AD6BC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5235B39D29ADDECD007AD6BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5235B39F29ADDED3007AD6BC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5243AA88295D6C4700F25F88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5243AA8A295D6DE500F25F88 /* SocialSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSignInModel.swift; sourceTree = "<group>"; };
 		5243AA8B295D6DE500F25F88 /* AppleLoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginHelper.swift; sourceTree = "<group>"; };
@@ -300,6 +312,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52314F2929BF03F200467010 /* StoreKit.framework in Frameworks */,
 				521D863B2992627C000B6087 /* WebKit.framework in Frameworks */,
 				15B87774D7303CD4F7D01C48 /* Pods_Bio_Family.framework in Frameworks */,
 			);
@@ -331,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				5232EB5D2956FDB400774FC6 /* Bio Family */,
+				5232EB722956FDEF00774FC6 /* Designables */,
 				5248E3D32970356F00EB047A /* NotificationExtension */,
 				5232EB5C2956FDB400774FC6 /* Products */,
 				7EC24EDD074EA617BC3642B5 /* Pods */,
@@ -359,19 +373,17 @@
 				52924058295705F000DA48AF /* StoryBoard */,
 				529240532957024B00DA48AF /* Controllers */,
 				5232EB742956FE0300774FC6 /* BaseVC */,
-				5243AA8B295D6DE500F25F88 /* AppleLoginHelper.swift */,
-				5243AA8D295D6DE500F25F88 /* FacebookSignInHelper.swift */,
-				5243AA8C295D6DE500F25F88 /* GoogleSignInHelper.swift */,
-				5243AA8A295D6DE500F25F88 /* SocialSignInModel.swift */,
+				524075F4299E015000EAC185 /* SocialLogin */,
 				5232EB732956FDF700774FC6 /* Utils */,
-				5232EB722956FDEF00774FC6 /* Designables */,
+				5235B39729ADDE96007AD6BC /* LocalizableString */,
 				5232EB5E2956FDB400774FC6 /* AppDelegate.swift */,
-				5243AA88295D6C4700F25F88 /* GoogleService-Info.plist */,
 				5232EB602956FDB400774FC6 /* SceneDelegate.swift */,
 				5232EB672956FDB500774FC6 /* Assets.xcassets */,
 				52924054295702D200DA48AF /* Colors.xcassets */,
 				5232EB692956FDB500774FC6 /* LaunchScreen.storyboard */,
 				5232EB6C2956FDB500774FC6 /* Info.plist */,
+				5243AA88295D6C4700F25F88 /* GoogleService-Info.plist */,
+				52314F2A29BF070000467010 /* AppUpdater.swift */,
 			);
 			path = "Bio Family";
 			sourceTree = "<group>";
@@ -427,6 +439,25 @@
 				52DA8975299128AC00958700 /* 54633-no-internet-access-animation.json */,
 			);
 			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		5235B39729ADDE96007AD6BC /* LocalizableString */ = {
+			isa = PBXGroup;
+			children = (
+				5235B39E29ADDECD007AD6BC /* Localizable.strings */,
+			);
+			path = LocalizableString;
+			sourceTree = "<group>";
+		};
+		524075F4299E015000EAC185 /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				5243AA8B295D6DE500F25F88 /* AppleLoginHelper.swift */,
+				5243AA8D295D6DE500F25F88 /* FacebookSignInHelper.swift */,
+				5243AA8C295D6DE500F25F88 /* GoogleSignInHelper.swift */,
+				5243AA8A295D6DE500F25F88 /* SocialSignInModel.swift */,
+			);
+			path = SocialLogin;
 			sourceTree = "<group>";
 		};
 		5248E3D32970356F00EB047A /* NotificationExtension */ = {
@@ -547,11 +578,11 @@
 		52B2A1172962EEAA004D16F8 /* RxApi */ = {
 			isa = PBXGroup;
 			children = (
-				52B2A1182962EED0004D16F8 /* ApiWrapper.swift */,
 				52B2A11C2962EED1004D16F8 /* FileSerilizer.swift */,
 				52B2A11A2962EED1004D16F8 /* JsonDeserilizer.swift */,
 				52B2A11B2962EED1004D16F8 /* JsonSerilizer.swift */,
 				52B2A11D2962EED1004D16F8 /* RxApi.swift */,
+				52B2A1182962EED0004D16F8 /* ApiWrapper.swift */,
 				52B2A1192962EED1004D16F8 /* RxUtils.swift */,
 				52B2A11E2962EED2004D16F8 /* Schedulers.swift */,
 			);
@@ -591,6 +622,7 @@
 		B7F50AB88144BB4118BCDEF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52314F2829BF03F200467010 /* StoreKit.framework */,
 				521D863A2992627C000B6087 /* WebKit.framework */,
 				5248E3BD2970245400EB047A /* UserNotifications.framework */,
 				5248E3BF2970245400EB047A /* UserNotificationsUI.framework */,
@@ -666,6 +698,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 5232EB522956FDB400774FC6;
 			productRefGroup = 5232EB5C2956FDB400774FC6 /* Products */;
@@ -692,6 +725,7 @@
 				5243AA89295D6C4700F25F88 /* GoogleService-Info.plist in Resources */,
 				52924072295706A200DA48AF /* Poppins-Thin.ttf in Resources */,
 				52924078295706A200DA48AF /* Poppins-MediumItalic.ttf in Resources */,
+				5235B39B29ADDECD007AD6BC /* Localizable.strings in Resources */,
 				52924076295706A200DA48AF /* Poppins-SemiBold.ttf in Resources */,
 				5292407B295706A200DA48AF /* Poppins-LightItalic.ttf in Resources */,
 				52924055295702D200DA48AF /* Colors.xcassets in Resources */,
@@ -715,6 +749,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5235B39C29ADDECD007AD6BC /* Localizable.strings in Resources */,
+				5235B3A029ADE344007AD6BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +901,7 @@
 				5232EB9A2956FE1700774FC6 /* Validator.swift in Sources */,
 				5232EB962956FE1700774FC6 /* LocalErrors.swift in Sources */,
 				5232EBA72956FE2500774FC6 /* UIViewAnchorPoint.swift in Sources */,
+				52314F2B29BF070000467010 /* AppUpdater.swift in Sources */,
 				5232EB942956FE1700774FC6 /* DeviceUtils.swift in Sources */,
 				5232EBAE2956FE2500774FC6 /* UIButtonX.swift in Sources */,
 				5232EB792956FE0E00774FC6 /* BaseVC.swift in Sources */,
@@ -908,6 +945,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				5232EB652956FDB400774FC6 /* Base */,
+				5235B39329ADD893007AD6BC /* en */,
+				5235B39529ADDE1F007AD6BC /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -916,8 +955,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				5232EB6A2956FDB500774FC6 /* Base */,
+				5235B39629ADDE1F007AD6BC /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5235B39E29ADDECD007AD6BC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5235B39D29ADDECD007AD6BC /* en */,
+				5235B39F29ADDED3007AD6BC /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -927,6 +976,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -987,6 +1037,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1045,7 +1096,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Bio Family/Bio Family.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1053,6 +1105,9 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MH294PXSYY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bio Family/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow To Update Profile Picture";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow To Access Current Location To FInd Nearest Clinic";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow To Update Profile Picture";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1064,11 +1119,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BioFamily.Bio-Family.Bio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = BioFamilyDist;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bio familyDev";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1086,13 +1141,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Bio Family/Bio Family.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MH294PXSYY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bio Family/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow To Update Profile Picture";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow To Access Current Location To FInd Nearest Clinic";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow To Update Profile Picture";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1104,11 +1163,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BioFamily.Bio-Family.Bio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = BioFamilyDist;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Bio familyDev";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1124,7 +1183,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = NotificationExtension/NotificationExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -1143,7 +1202,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BioFamily.Bio-Family.Bio.NotificationExtensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Extension BioFamily";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Dev Extension";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1157,7 +1216,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = NotificationExtension/NotificationExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -1176,7 +1235,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BioFamily.Bio-Family.Bio.NotificationExtensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Extension BioFamily";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Dev Extension";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -30,7 +30,7 @@ class OtpVC: BaseViewController {
         obserSignINResponse()
     }
     override func viewWillAppear(_ animated: Bool) {
-        lblOtpMessgae.text = "We have sent a 4-digit verification code on \n your email id \(email ?? "")"
+        lblOtpMessgae.text = "\(Constants.Localicable.LblOtpTitle) \(email ?? "")"
     }
     //MARK: observer Otp
     fileprivate func obserSignINResponse(){
@@ -40,10 +40,10 @@ class OtpVC: BaseViewController {
         uploadVM.response.subscribe(onNext: { (response) in
             if response?.status == true{
                 if self.uploadVM.type == .forget{
-                    self.showAlert("Otp sent to your mail")
+                    self.showAlert(Constants.Localicable.otpToast)
                 }
                 else if self.uploadVM.type == .resend{
-                    self.showAlert("Otp sent to your mail")
+                    self.showAlert(Constants.Localicable.otpToast)
                     self.otp = response?.data
                 }
                 else{
@@ -78,7 +78,7 @@ class OtpVC: BaseViewController {
                     }
                 }
                 else{
-                    self.showAlert("Wrong otp")
+                    self.showAlert(Constants.Localicable.worngOtp)
                 }
             }
         }

@@ -77,14 +77,14 @@ class MyProfileVC: BaseViewController {
     @IBAction func actionDelete(_ sender: Any) {
        
         
-        let refreshAlert = UIAlertController(title: "BioFamily", message: "Are you sure yow want to delete your Account.", preferredStyle: UIAlertController.Style.alert)
+        let refreshAlert = UIAlertController(title: "BioFamily", message: Constants.Localicable.deleteAccount, preferredStyle: UIAlertController.Style.alert)
 
-        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: Constants.Localicable.Ok, style: .default, handler: { (action: UIAlertAction!) in
             self.uploadVM.delete()
             print("delete")
         }))
 
-        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: Constants.Localicable.Cancel, style: .cancel, handler: { (action: UIAlertAction!) in
               print("Handle Cancel Logic here")
         }))
 

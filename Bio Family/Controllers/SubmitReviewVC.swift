@@ -85,7 +85,7 @@ class SubmitReviewVC: BaseViewController {
         popupMainView.blurRadius = 4
         popupMainView.scale = 1
         textView.layer.cornerRadius = 10
-        textView.text = "Write your feedback..."
+        textView.text = Constants.Localicable.writeFeedback
         textView.textColor = UIColor.lightGray
         textView.delegate =  self
        
@@ -286,8 +286,8 @@ class SubmitReviewVC: BaseViewController {
     @IBAction func actionSubmit(_ sender: UIButton) {
        
         if  self.review.rating == 1 || self.review.rating == 2 ||  self.review.rating == 3 ||  self.review.rating == 4 ||  self.review.rating == 5{
-            if textView.text == "Write your feedback..." || textView.text == ""{
-                toast("Please enter Review")
+            if textView.text == Constants.Localicable.writeFeedback || textView.text == ""{
+                toast(Constants.Localicable.enterReview)
             }else{
                 AppointVM.reviewBoifamily(AppReviewBioFamily(review: String(review.rating),message: textView.text ?? ""))
             }
@@ -316,7 +316,7 @@ class SubmitReviewVC: BaseViewController {
 extension SubmitReviewVC:UITextViewDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Write your feedback..."
+            textView.text = Constants.Localicable.writeFeedback
             textView.textColor = UIColor.lightGray
         }
     }

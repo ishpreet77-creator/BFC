@@ -1587,7 +1587,7 @@ Better Health</string>
                                                     <outletCollection property="gestureRecognizers" destination="cwh-br-v8E" appends="YES" id="rBc-hr-uWn"/>
                                                 </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="— — — — — Or sign in with — — — — —" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs7-s6-FKw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="— — — — — Or sign in with — — — — — " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs7-s6-FKw">
                                                 <rect key="frame" x="83" y="703" width="248" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" name="blackText"/>
@@ -6552,9 +6552,12 @@ to login.</string>
                                                         <color key="textColor" name="blackText"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mbz-PV-5fv">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="Mbz-PV-5fv">
                                                         <rect key="frame" x="317" y="13" width="51" height="31"/>
                                                         <color key="onTintColor" name="blue"/>
+                                                        <connections>
+                                                            <action selector="actionSwitch:" destination="Dko-2r-YlB" eventType="valueChanged" id="k6F-KV-z0N"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                                 <color key="backgroundColor" name="settingTileColor"/>
@@ -6626,6 +6629,31 @@ to login.</string>
                                                     <outletCollection property="gestureRecognizers" destination="Ud8-8C-Rnd" appends="YES" id="Ktb-ln-H28"/>
                                                 </connections>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nM6-hj-SwP">
+                                                <rect key="frame" x="16" y="422" width="382" height="57"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpJ-zJ-T4Z">
+                                                        <rect key="frame" x="24" y="16.5" width="86.5" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                                        <color key="textColor" name="blackText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Navigation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wf-C0-8St">
+                                                        <rect key="frame" x="353.5" y="20.5" width="16.5" height="16"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="settingTileColor"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="7Wf-C0-8St" firstAttribute="centerY" secondItem="nM6-hj-SwP" secondAttribute="centerY" id="33r-Os-NwV"/>
+                                                    <constraint firstItem="mpJ-zJ-T4Z" firstAttribute="leading" secondItem="nM6-hj-SwP" secondAttribute="leading" constant="24" id="NL7-Ya-EeA"/>
+                                                    <constraint firstItem="mpJ-zJ-T4Z" firstAttribute="centerY" secondItem="nM6-hj-SwP" secondAttribute="centerY" id="iaJ-Vq-WUM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7Wf-C0-8St" secondAttribute="trailing" constant="12" id="xYf-MQ-HRk"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="uH2-qu-KmF" appends="YES" id="YLs-2R-HYp"/>
+                                                </connections>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="psI-To-xfU">
                                                 <rect key="frame" x="83" y="583" width="248" height="57"/>
                                                 <subviews>
@@ -6681,17 +6709,22 @@ to login.</string>
                                             <constraint firstItem="7SZ-vr-dHG" firstAttribute="leading" secondItem="XOr-VN-6CX" secondAttribute="leading" id="GiA-uA-yFY"/>
                                             <constraint firstItem="z1p-Yu-5KW" firstAttribute="height" secondItem="sFS-j6-u7I" secondAttribute="height" id="Lzz-Tq-B8e"/>
                                             <constraint firstAttribute="bottom" secondItem="psI-To-xfU" secondAttribute="bottom" constant="160" id="MOm-pT-3cv"/>
+                                            <constraint firstItem="7Wf-C0-8St" firstAttribute="height" secondItem="RIO-Jq-sWA" secondAttribute="height" id="MQF-Tw-cPJ"/>
                                             <constraint firstItem="5Pl-aT-SYv" firstAttribute="height" secondItem="WiW-qh-h9o" secondAttribute="height" id="NhC-dP-1zh"/>
                                             <constraint firstItem="5yb-KD-2Rf" firstAttribute="leading" secondItem="7SZ-vr-dHG" secondAttribute="leading" id="Qhr-Xr-DIT"/>
                                             <constraint firstItem="WiW-qh-h9o" firstAttribute="leading" secondItem="Xgc-oe-R9u" secondAttribute="leading" constant="16" id="RCc-H6-dq2"/>
                                             <constraint firstItem="5yb-KD-2Rf" firstAttribute="width" secondItem="XOr-VN-6CX" secondAttribute="width" id="TPZ-EJ-a4L"/>
                                             <constraint firstItem="7U3-uY-NSi" firstAttribute="height" secondItem="z1p-Yu-5KW" secondAttribute="height" id="UXu-Aa-kWH"/>
                                             <constraint firstItem="7U3-uY-NSi" firstAttribute="width" secondItem="z1p-Yu-5KW" secondAttribute="width" id="VoF-qm-G6X"/>
+                                            <constraint firstItem="nM6-hj-SwP" firstAttribute="top" secondItem="5yb-KD-2Rf" secondAttribute="bottom" constant="-3" id="Y9q-H8-73c"/>
                                             <constraint firstItem="5yb-KD-2Rf" firstAttribute="top" secondItem="7SZ-vr-dHG" secondAttribute="bottom" constant="1" id="a0W-X7-bLv">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="3"/>
                                             </constraint>
                                             <constraint firstItem="7SZ-vr-dHG" firstAttribute="top" secondItem="Li1-hT-947" secondAttribute="bottom" constant="16" id="b5q-nv-yzs"/>
+                                            <constraint firstItem="7Wf-C0-8St" firstAttribute="width" secondItem="RIO-Jq-sWA" secondAttribute="width" id="bXh-NQ-Ffj"/>
+                                            <constraint firstItem="nM6-hj-SwP" firstAttribute="width" secondItem="5yb-KD-2Rf" secondAttribute="width" id="bxa-DZ-9sZ"/>
                                             <constraint firstItem="RIO-Jq-sWA" firstAttribute="width" secondItem="7U3-uY-NSi" secondAttribute="width" id="cI3-pU-xOf"/>
+                                            <constraint firstItem="nM6-hj-SwP" firstAttribute="height" secondItem="5yb-KD-2Rf" secondAttribute="height" id="d1k-Nr-bLi"/>
                                             <constraint firstItem="Li1-hT-947" firstAttribute="leading" secondItem="wYg-CB-YRr" secondAttribute="leading" id="ea2-Si-Fo0"/>
                                             <constraint firstAttribute="trailing" secondItem="WiW-qh-h9o" secondAttribute="trailing" constant="16" id="fya-DT-c9p"/>
                                             <constraint firstItem="XOr-VN-6CX" firstAttribute="height" secondItem="WiW-qh-h9o" secondAttribute="height" id="i7L-bn-Oaw"/>
@@ -6707,6 +6740,8 @@ to login.</string>
                                             <constraint firstItem="5yb-KD-2Rf" firstAttribute="trailing" secondItem="7SZ-vr-dHG" secondAttribute="trailing" id="roN-F1-AY4"/>
                                             <constraint firstItem="wYg-CB-YRr" firstAttribute="leading" secondItem="Xgc-oe-R9u" secondAttribute="leading" constant="16" id="ujP-Q0-ebr"/>
                                             <constraint firstItem="XOr-VN-6CX" firstAttribute="trailing" secondItem="5Pl-aT-SYv" secondAttribute="trailing" id="wLO-hX-al2"/>
+                                            <constraint firstItem="nM6-hj-SwP" firstAttribute="trailing" secondItem="5yb-KD-2Rf" secondAttribute="trailing" id="wuD-G3-SrM"/>
+                                            <constraint firstItem="nM6-hj-SwP" firstAttribute="leading" secondItem="5yb-KD-2Rf" secondAttribute="leading" id="x6j-fy-3IU"/>
                                             <constraint firstItem="5Pl-aT-SYv" firstAttribute="width" secondItem="WiW-qh-h9o" secondAttribute="width" id="zIi-8A-xNg"/>
                                         </constraints>
                                     </view>
@@ -6749,6 +6784,7 @@ to login.</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="notificationSwitch" destination="Mbz-PV-5fv" id="3fV-rJ-y1s"/>
                         <outlet property="topNavView" destination="HUM-md-zPn" id="wPs-Rt-abU"/>
                     </connections>
                 </viewController>
@@ -6776,6 +6812,11 @@ to login.</string>
                 <tapGestureRecognizer id="aOE-m7-HNR">
                     <connections>
                         <action selector="actionBack:" destination="Dko-2r-YlB" id="ZVl-GL-0KC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uH2-qu-KmF">
+                    <connections>
+                        <action selector="actionLanguage:" destination="Dko-2r-YlB" id="MHb-kI-fSa"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -7586,7 +7627,7 @@ to login.</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="10881.159420289856" y="1481.9196428571429"/>
+            <point key="canvasLocation" x="10932" y="1482"/>
         </scene>
         <!--Drawer Controller-->
         <scene sceneID="lwD-UF-USa">
@@ -7695,10 +7736,10 @@ to login.</string>
                                                                         <constraint firstAttribute="width" constant="24" id="ou2-4X-Wwl"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVk-fb-pRs">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVk-fb-pRs">
                                                                     <rect key="frame" x="60" y="23.5" width="45" height="21"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
-                                                                    <color key="textColor" name="blackText"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="heightClass=regular-widthClass=regular">
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
@@ -9666,7 +9707,7 @@ appointments,our team will get back to you soon</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="11802.898550724638" y="1481.9196428571429"/>
+            <point key="canvasLocation" x="11699" y="1482"/>
         </scene>
         <!--Submit ReviewVC-->
         <scene sceneID="6kZ-gc-JO6">
@@ -10267,7 +10308,7 @@ Review has been Submitted</string>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll get back to you within 48 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrJ-bc-5ru">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll get back to you within 48 hours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrJ-bc-5ru">
                                 <rect key="frame" x="40" y="127" width="334" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                 <color key="textColor" name="blackText"/>

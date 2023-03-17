@@ -126,37 +126,37 @@ extension HistoryVC : UITableViewDataSource,UITableViewDelegate{
         cell.LblReason.text = appointments[indexPath.row].reasonOfAppointment
         
         if appointments[indexPath.row].status == 0{
-            cell.lblReaseon.text = "New"
+            cell.lblReaseon.text = Constants.Localicable.New
             cell.historyImageView.image = UIImage(named: "BlueRectangle")
             cell.historyImageView.isHidden = false
         }
        else if appointments[indexPath.row].status == 1{
-            cell.lblReaseon.text = "Reschedule"
+           cell.lblReaseon.text = Constants.Localicable.Reschedule
 //            cell.historyImageView.image = UIImage(named:  "RectangleGreen")
             cell.historyImageView.isHidden = true
             cell.LabelView.backgroundColor = UIColor(named: "SolidGreen2")
            
         }
        else if appointments[indexPath.row].status == 2{
-            cell.lblReaseon.text = "Cancel"
+           cell.lblReaseon.text = Constants.Localicable.Cancel
             cell.historyImageView.image = UIImage(named:  "RectangleRed")
            cell.historyImageView.isHidden = false
           
         }
       else if appointments[indexPath.row].status == 3{
-            cell.lblReaseon.text = "Confirm"
+          cell.lblReaseon.text = Constants.Localicable.Confirm
             cell.LabelView.backgroundColor = UIColor(named: "yellowColor")
             cell.historyImageView.isHidden = true
 //            cell.historyImageView.image = UIImage(named:  "RectangleRed")
         }
         else if appointments[indexPath.row].status == 4{
-              cell.lblReaseon.text = "Refill prescriptions"
+            cell.lblReaseon.text = Constants.Localicable.refillPrescripition
               cell.LabelView.backgroundColor = UIColor(named: "Colorpurple")
               cell.historyImageView.isHidden = true
   //            cell.historyImageView.image = UIImage(named:  "RectangleRed")
           }
         else{
-            cell.lblReaseon.text = "Invaild status"
+            cell.lblReaseon.text = Constants.Localicable.invaildStatus
             cell.LabelView.backgroundColor = UIColor.brown
             cell.historyImageView.isHidden = true
         }

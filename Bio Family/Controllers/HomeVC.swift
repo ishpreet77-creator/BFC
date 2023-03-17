@@ -160,7 +160,7 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
         else if indexPath.row == 2{
             let _:SubmitReviewVC = self.open{
                 $0.image = "ReviewStar 1"
-                $0.buttonText = "Submit Your Review"
+                $0.buttonText = Constants.Localicable.submitReview
                 $0.isFromWifi = false
             }
             

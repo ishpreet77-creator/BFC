@@ -89,19 +89,19 @@ class FreeWifiVC: BaseViewController {
     
     @IBAction func actionNext(_ sender: Any) { 
         if TfWifiName.text?.isEmpty == true{
-            toast("Please enter WifiName")
+            toast(Constants.Localicable.enterWifiName)
         }
         else if TfPassword.text?.isEmpty == true{
-            toast("Please enter Password")
+            toast(Constants.Localicable.enterPassword)
             
         }
         else if btn_box.isSelected == false {
-            toast("Please Check the Terms and Condition")
+            toast(Constants.Localicable.checkTermsAndCondition)
         }
             else{
             let _: SubmitReviewVC = self.open{
                 $0.image = "FreeWifi"
-                $0.buttonText = "Join Free Wifi Now"
+                $0.buttonText = Constants.Localicable.joinFreeWifi
                 $0.isFromWifi = true
                 $0.WifiName = TfWifiName.text ?? ""
                 

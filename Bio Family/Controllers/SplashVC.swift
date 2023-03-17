@@ -14,13 +14,14 @@ class SplashVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: false)
     }
+   
     
     //MARK: action timer
     @IBAction func timerAction(){

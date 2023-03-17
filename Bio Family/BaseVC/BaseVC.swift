@@ -4,6 +4,7 @@ import Toast_Swift
 import SVProgressHUD
 import Lottie
 import Combine
+import StoreKit
 //import FirebaseAuth
 //import KYDrawerController
 
@@ -16,6 +17,8 @@ class BaseViewController: UIViewController {
     var isFromPopUp:Bool = false
     var typee:UIImagePickerController.SourceType = .camera
     var subscriptions = Set<AnyCancellable>()
+    
+    var updateIsAvailable = false
     private var  ImageView : LottieAnimationView? = nil
     //    var progressView = CustomProgressView()
     //    let auth = Auth.auth()
@@ -23,6 +26,13 @@ class BaseViewController: UIViewController {
     
     //MARK: Lifecycles
     override func viewDidLoad() {
+//        if updateIsAvailable {
+//               showUpdateAlert()
+//        }else{
+//            print("no update  @@@@@@@@@@++++++++=======>")
+//
+//        }
+        
         ConfigUI()
         hideNavBar()
         setProgressHUD()
@@ -344,6 +354,73 @@ class BaseViewController: UIViewController {
             //             self.progressView.removeFromSuperview()
         }
     }
+    
+    //MARK: SHOW VERSIONALERT
+    
+
+    
+ 
+    //MARK: check update
+    
+    
+    
+
+    
+//    func checkForUpdates(){
+//        let appId = "1666464256"
+//        let appStoreURL = URL(string: "https://itunes.apple.com/app/id\(appId)?mt=8&action=write-review")!
+//
+//        let storeViewController = SKStoreProductViewController()
+//        storeViewController.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: appId]) { (success, error) in
+//            if success {
+//                self.present(storeViewController, animated: true, completion: nil)
+//            } else {
+//                print("Error: \(error?.localizedDescription ?? "Unknown error")")
+//            }
+//        }
+//
+//
+//        let bundleIdentifier = Bundle.main.bundleIdentifier!
+//        let url = URL(string: "https://itunes.apple.com/lookup?bundleId=\(bundleIdentifier)")!
+//
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if let error = error {
+//                print("Error: \(error.localizedDescription)")
+//                return
+//            }
+//
+//            guard let data = data else {
+//                print("Error: No data received")
+//                return
+//            }
+//
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+//                let results = json["results"] as! [[String: Any]]
+//                let currentVersion = results[0]["version"] as! String
+//
+//                // Compare current version with installed version
+//                let installedVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+//
+//                if currentVersion != installedVersion {
+//                    // Show update notification
+//                    let alert = UIAlertController(title: "Update Available", message: "A new version of the app is available. Do you want to update now?", preferredStyle: .alert)
+//                    alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { _ in
+//                        // Open App Store page
+//                        self.present(storeViewController, animated: true, completion: nil)
+//                    }))
+//
+//                }
+//            } catch {
+//                print("Error: \(error.localizedDescription)")
+//            }
+//        }
+//
+//        task.resume()
+//
+//    }
+    
+    
 }
 
 extension BaseViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate{

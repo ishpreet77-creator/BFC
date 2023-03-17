@@ -64,21 +64,21 @@ class BookAppointmentVC: BaseViewController {
         textView.layer.cornerRadius = 10
         switch requestType {
         case .newRequest:
-            navTitle.text = "Schedule Appointment"
-            btnBook.setTitle("Send", for: .normal)
-            lblReason.text = "Reason for Appointment"
+            navTitle.text = Constants.Localicable.scheduleAppoint
+            btnBook.setTitle(Constants.Localicable.Send, for: .normal)
+            lblReason.text = Constants.Localicable.reasonAppoint
         case .isCAncel:
-            navTitle.text = "Cancel Appointment"
-            btnBook.setTitle("Send", for: .normal)
-            lblReason.text = "Reason for Cancel"
+            navTitle.text = Constants.Localicable.cancelAppoint
+            btnBook.setTitle(Constants.Localicable.Send, for: .normal)
+            lblReason.text = Constants.Localicable.reasonCancel
         case .reschedule:
-            navTitle.text = "Reschedule Appointment"
-            btnBook.setTitle("Reschedule", for: .normal)
-            lblReason.text = "Reason for Reschedule"
+            navTitle.text = Constants.Localicable.rescheduleAppoint
+            btnBook.setTitle(Constants.Localicable.Reschedule, for: .normal)
+            lblReason.text = Constants.Localicable.reasonReschedule
         case .confirm:
-            navTitle.text = "Confirm Appointment"
-            btnBook.setTitle("Confirm", for: .normal)
-            lblReason.text = "Reason for Confirm"
+            navTitle.text = Constants.Localicable.confirmAppoint
+            btnBook.setTitle(Constants.Localicable.Confirm, for: .normal)
+            lblReason.text = Constants.Localicable.reasonConfirm
         }
         
 //        if isReschedule{
@@ -150,26 +150,26 @@ class BookAppointmentVC: BaseViewController {
         switch requestType {
         case .newRequest:
             if (textView.text .isEmpty) == true{
-                toast("please enter reason for appointment")
+                toast(Constants.Localicable.reasonTextViewEmpty)
             }else{
                 uploadVM.appointment(AppRequest(reasonOfAppointment: textView.text))
             }
         case .isCAncel:
         
             if (textView.text .isEmpty) == true{
-                toast("please enter reason for appointment")
+                toast(Constants.Localicable.reasonTextViewEmpty)
             }else{
                 uploadVM.reScheduleAppoint(AppRequest(reasonOfAppointment: textView.text ?? "",type: "cancel"))
             }
         case .reschedule:
             if (textView.text .isEmpty) == true{
-                toast("please enter reason for appointment")
+                toast(Constants.Localicable.reasonTextViewEmpty)
             }else{
                 uploadVM.reScheduleAppoint(AppRequest(reasonOfAppointment: textView.text ?? "",type: "reschedule"))
             }
         case .confirm:
             if (textView.text .isEmpty) == true{
-                toast("please enter reason for appointment")
+                toast(Constants.Localicable.reasonTextViewEmpty)
             }else{
                 uploadVM.reScheduleAppoint(AppRequest(reasonOfAppointment: textView.text ?? "",type: "confirm"))
             }

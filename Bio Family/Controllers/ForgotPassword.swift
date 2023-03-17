@@ -45,7 +45,7 @@ class ForgotPassword: BaseViewController {
     //MARK: action Forgot
     @IBAction func actionContinue(_ sender: UIButton) {
         if !isValidEmail(tfEmail.text ?? ""){
-            toast("Please enter valid email id")
+            toast(Constants.Localicable.vaildEmailId)
         }
         else{
             uploadVM.forget(ForgetReqst(email:tfEmail.text ?? ""))

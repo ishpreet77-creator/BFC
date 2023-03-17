@@ -76,7 +76,7 @@ class PrescriptionVC: BaseViewController {
 
     @IBAction func actionPrescription(_ sender: Any) {
         if textViewPrescription.text.isEmpty == true{
-            toast("Plese enter Prescripition")
+            toast(Constants.Localicable.enterPrescripition)
         }
         else{
             uploadVM.prescription(AppPrescripition(message: textViewPrescription.text ?? ""))

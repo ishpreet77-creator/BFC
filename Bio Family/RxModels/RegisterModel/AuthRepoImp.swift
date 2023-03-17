@@ -10,7 +10,6 @@ import RxSwift
 
 class AuthRepoImp: AuthRepo{
   
-  
     
     private var rxApi:RxApi
     
@@ -58,6 +57,10 @@ class AuthRepoImp: AuthRepo{
     
     func resentOtp(_ req: ForgetReqst) -> RxSwift.Single<AuthResponse> {
         return rxApi.post(path: Constants.RxApiEnds.resend, value: req).asSingle()
+    }
+    
+    func notificxation(_ req: NotificationRequest) -> RxSwift.Single<AuthResponse> {
+        return rxApi.post(path: Constants.RxApiEnds.notification, value: req).asSingle()
     }
 //    func updateUserInfo(_ req: AuthRequest) -> Single<AuthResponse>{
 //        return rxApi.postUpload(path: Constants.RxApiEnds.updateUser, value: req).asSingle()

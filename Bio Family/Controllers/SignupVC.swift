@@ -35,6 +35,10 @@ class SignupVC: BaseViewController ,UITextFieldDelegate{
     
     @IBOutlet weak var btn_box2: UIButton!
     @IBOutlet weak var btn_box: UIButton!
+    
+    
+    
+    
     //MARK: constant
     private let uploadVM = AuthVM.init(repository: AuthRepoImp.init(rxApi: RxApi()))
     let date = DropDown()
@@ -204,43 +208,43 @@ class SignupVC: BaseViewController ,UITextFieldDelegate{
     //MARK: action Signup
     @IBAction func actionSignup(_ sender: Any) {
         if tfFirstName.text == ""{
-            toast("Please enter First Name")
+            toast(Constants.Localicable.enterFirstName)
         }
         else if tfLastName.text == ""{
-            toast("Please enter Last Name")
+            toast(Constants.Localicable.enterLastname)
         }
         else if tfEmail.text == ""{
-            toast("Please enter email")
+            toast(Constants.Localicable.enterEmail)
         }
         else if !isValidEmail(tfEmail.text ?? ""){
-            toast("Please enter Valid email")
+            toast(Constants.Localicable.enterVaildEmail)
         }
         else if tfMonth.text == "" || tfDate.text == "" || tfYear.text == ""{
-            toast("Please enter date of birth")
+            toast(Constants.Localicable.enterDOB)
         }
         else if tfPhone.text == ""{
-            toast("Please enter Phone Number")
+            toast(Constants.Localicable.enterPhoneNO)
         }
         else if tfPassword.text == ""{
-            toast("Please enter Password")
+            toast(Constants.Localicable.enterPassword)
         }
         else if tfConfirmPassword.text == ""{
-            toast("Please enter Confirm Password")
+            toast(Constants.Localicable.enterConfirmPassword)
         }
         else if isPasswordValid(tfPassword.text ?? "") == false{
-            showAlert("Password length is 8.\nUpperCase letters in Password.\nOne Special Character in Password.\nTwo Number in Password.\nThree letters of lowercase in password")
+            showAlert(Constants.Localicable .eterVaildPassword)
         }
         else if tfPassword.text != tfConfirmPassword.text{
-            toast("Password Does not match with confirm password")
+            toast(Constants.Localicable.passwordNotMatch)
         }
         else if tfInsurrance.text == ""{
-            toast("Please enter insurrance name")
+            toast(Constants.Localicable.enterInsurranceName)
         }
 //        else if btn_box.isSelected == false {
 //            toast("Please Read the Disclamer and check the box to SignUp")
 //        }
         else if btn_box2.isSelected == false {
-            toast("Please Check the Privacy Policy and Terms and Condition")
+            toast(Constants.Localicable.checkPrivacy)
         }
        
         else{

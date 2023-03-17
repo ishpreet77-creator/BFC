@@ -19,6 +19,9 @@ struct Constants{
 //        static let baseUrl: String = "http://solidappmaker.ml/projects/php/healthy/healthy-slate/public/"
     
         static let baseUrl: String = "https://biofamily.solidappmaker.ml/api/v1/"
+//    https://biofamily.solidappmaker.ml/api/v1/
+//        static let baseUrl: String = "https://api.bfcapp.com/api/v1/"
+    
 //        static let baseUrlImage: String = "http://solidappmaker.ml/projects/php/healthy/healthy-slate/public/assets/images/temporary/"
 //        static let baseUrlImage: String = "http://solidappmaker.ml/projects/php/healthy/healthy-slate/public/assets/images/temporary/"
         
@@ -46,7 +49,7 @@ struct Constants{
         static let prescripition = "appointment/add_prescription"
         static let delete = "user/delete_user_account"
         static let resend = "user/resend_otp"
-        
+        static let notification = "user/enable_disable_notification_by_user"
         
         
       
@@ -96,6 +99,93 @@ struct Constants{
         static var getNotificationCount = "api/unreadNotificationCount"
         static var getOverallCount = "api/activityCompletedBadge"
     }
+    
+    
+    
+    struct Localicable{
+      
+        static let enterFirstName = NSLocalizedString("Please enter First Name", comment: "")
+        static let enterLastname = NSLocalizedString("Please enter Last Name", comment: "")
+        
+        static let enterEmail = NSLocalizedString("Please enter email", comment: "")
+        static let enterVaildEmail = NSLocalizedString("Please enter Valid email", comment: "")
+        static let enterDOB = NSLocalizedString("Please enter date of birth", comment: "")
+        static let enterPhoneNO = NSLocalizedString("Please enter Phone Number", comment: "")
+        static let enterPassword = NSLocalizedString("Please enter Password", comment: "")
+        static let enterConfirmPassword = NSLocalizedString("Please enter Confirm Password", comment: "")
+        static let eterVaildPassword = NSLocalizedString("Please enter Valid Password", comment: "")
+        static let passwordNotMatch = NSLocalizedString("Password Does not match with confirm password", comment: "")
+        static let enterInsurranceName = NSLocalizedString("Please enter insurrance name", comment: "")
+        static let checkPrivacy = NSLocalizedString("Please Check the Privacy Policy and Terms and Condition", comment: "")
+        static let vaildEmailId = NSLocalizedString("Please enter valid email id", comment: "")
+        static let LblOtpTitle = NSLocalizedString("We have sent a 4-digit verification code on \n your email id", comment: "")
+        static let otpToast = NSLocalizedString("Otp sent to your mail", comment: "")
+        static let worngOtp = NSLocalizedString("Wrong otp", comment: "")
+        static let watchVideos = NSLocalizedString("Watch\nEducational Videos \n", comment: "")
+        static let readMagazine = NSLocalizedString("Read\nHealth tips \n Magazine", comment: "")
+        static let submitReview = NSLocalizedString("Submit Your Review", comment: "")
+        static let deleteAccount = NSLocalizedString("Are you sure yow want to delete your Account.", comment: "")
+        static let Ok = NSLocalizedString("Ok", comment: "")
+        static let Cancel = NSLocalizedString("Cancel", comment: "")
+        static let scheduleAppoint = NSLocalizedString("Schedule Appointment", comment: "")
+        static let Send = NSLocalizedString("Send", comment: "")
+        static let reasonAppoint = NSLocalizedString("Reason for Appointment", comment: "")
+        static let cancelAppoint = NSLocalizedString("Cancel Appointment", comment: "")
+        static let reasonCancel = NSLocalizedString("Reason for Cancel", comment: "")
+        static let rescheduleAppoint = NSLocalizedString("Reschedule Appointment", comment: "")
+       
+        static let Reschedule = NSLocalizedString("Reschedule", comment: "")
+        static let reasonReschedule = NSLocalizedString("Reason for Reschedule", comment: "")
+       
+        static let confirmAppoint = NSLocalizedString("Confirm Appointment", comment: "")
+       
+        static let Confirm = NSLocalizedString("Confirm", comment: "")
+       
+        static let reasonConfirm = NSLocalizedString("Reason for Confirm", comment: "")
+       
+        static let reasonTextViewEmpty = NSLocalizedString("please enter reason for appointment", comment: "")
+       
+        static let writeFeedback = NSLocalizedString("Write your feedback...", comment: "")
+       
+        static let typeMessage = NSLocalizedString("Type your Message...", comment: "")
+        
+        static let enterMessage = NSLocalizedString("Please enter Message", comment: "")
+       
+        static let New = NSLocalizedString("New", comment: "")
+       
+        static let refillPrescripition = NSLocalizedString("Refill prescriptions", comment: "")
+       
+        static let invaildStatus = NSLocalizedString("Invaild status", comment: "")
+       
+        static let enterWifiName = NSLocalizedString("Please enter WifiName", comment: "")
+       
+        static let checkTermsAndCondition = NSLocalizedString("Please Check the Terms and Condition", comment: "")
+        static let requestNewAppoint = NSLocalizedString("Request New Appointment", comment: "")
+        
+        static let cancelExistingAppoint = NSLocalizedString("Cancel Existing Appointment", comment: "")
+        
+        static let enterPrescripition = NSLocalizedString("Plese enter Prescripition", comment: "")
+        
+        static let settingLanguageTitle = NSLocalizedString("App restart required", comment: "")
+        static let enterLanguageMessage = NSLocalizedString("In order to change the language, the App needs to be restarted", comment: "")
+        
+        static let video = NSLocalizedString("Watch Educational Videos", comment: "")
+        static let home = NSLocalizedString("Home", comment: "")
+        static let profile = NSLocalizedString("My Profile", comment: "")
+        static let appointment = NSLocalizedString("Appointments", comment: "")
+        static let magzine = NSLocalizedString("Read Health Tips Magazine", comment: "")
+        static let setting = NSLocalizedString("Settings", comment: "")
+        
+        static let history = NSLocalizedString("History", comment: "")
+        static let enterOldPassword = NSLocalizedString("Please enter old password", comment: "")
+        static let enterReview = NSLocalizedString("Please enter Review", comment: "")
+        static let joinFreeWifi = NSLocalizedString("Join Free Wifi Now", comment: "")
+        
+    }
+    
+    
+    
+    
     
     struct NotifNames{
         static let refreshTokenExpire: String = "refreshTokenExpire"
@@ -190,7 +280,7 @@ struct Constants{
         static let appWhite: UIColor = UIColor(named: "white") ?? .white
         static let applightBlue: UIColor = UIColor(named: "lightBlue") ?? .white
         static let appBlue: UIColor = UIColor(named: "blue") ?? .white
-        static let blackText: UIColor = UIColor(named: "blackText") ?? .white
+        static let blackText: UIColor = UIColor(named: "blackText") ?? .black
         
         static let greenBox: UIColor = UIColor(named: "greenBox") ?? .white
         static let orangeBox: UIColor = UIColor(named: "orangeBox") ?? .white

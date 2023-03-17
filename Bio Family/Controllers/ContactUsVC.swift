@@ -35,7 +35,7 @@ class ContactUsVC: BaseViewController {
     fileprivate func configureUI() {
         topNavView.layer.maskedCorners =  [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         textView.layer.cornerRadius = 10
-        textView.text = "Type your Message..."
+        textView.text = Constants.Localicable.typeMessage
         textView.textColor = UIColor.lightGray
         textView.delegate =  self
     }
@@ -102,19 +102,19 @@ class ContactUsVC: BaseViewController {
     //MARK: actionSubmit
     @IBAction func actionSubmit(_ sender: UIButton) {
         if tfLastname.text?.isEmpty == true{
-            toast("Please enter Lastname")
+            toast(Constants.Localicable.enterLastname)
         }
         else if tfFirstname.text?.isEmpty == true{
-            toast("Please enter Firstname")
+            toast(Constants.Localicable.enterFirstName)
         }
         else if tfEmail.text?.isEmpty == true {
-            toast("Please enter Email")
+            toast(Constants.Localicable.enterEmail)
         }
         else if !isValidEmail(tfEmail.text ?? "") == true {
-            toast("Please enter valid Email")
+            toast(Constants.Localicable.enterVaildEmail)
         }
         else if textView.text.isEmpty == true{
-            toast("Please enter Message")
+            toast(Constants.Localicable.enterMessage)
         }
         else{
             AppointVM.contactUs(AppContactUs(firstname: tfFirstname.text ?? "",lastname: tfLastname.text ?? "",email: tfEmail.text ?? "",message: textView.text ?? ""))
@@ -135,7 +135,7 @@ class ContactUsVC: BaseViewController {
 extension ContactUsVC:UITextViewDelegate{
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "Type your Message..."
+            textView.text = Constants.Localicable.typeMessage
             textView.textColor = UIColor.lightGray
         }
     }
